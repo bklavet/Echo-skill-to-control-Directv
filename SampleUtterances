@@ -1,0 +1,75 @@
+DirectvIntent {to play|Control}
+DirectvIntent {play|Control}
+DirectvIntent {resume|Control}
+DirectvIntent {to pause|Control}
+DirectvIntent {pause|Control}
+DirectvIntent {freeze|Control}
+DirectvIntent {go to guide|Control}
+DirectvIntent {open guide|Control}
+DirectvIntent {power|Control}
+DirectvIntent {to turn on|Control}
+DirectvIntent {power up|Control}
+DirectvIntent {power on|Control}
+DirectvIntent {turn the power off|Control}
+DirectvIntent {turn off|Control}
+DirectvIntent {power off|Control}
+DirectvIntent {power down|Control}
+DirectvIntent {format|Control}
+DirectvIntent {to rewind|Control}
+DirectvIntent {rewind|Control}
+DirectvIntent {to replay|Control}
+DirectvIntent {replay|Control}
+DirectvIntent {to stop|Control}
+DirectvIntent {stop|Control}
+DirectvIntent {advance|Control}
+DirectvIntent {to fast forward|Control}
+DirectvIntent {fast forward|Control}
+DirectvIntent {to record|Control}
+DirectvIntent {record|Control}
+DirectvIntent {save|Control}
+DirectvIntent {active|Control}
+DirectvIntent {go to list|Control}
+DirectvIntent {list|Control}
+DirectvIntent {find recorded shows|Control}
+DirectvIntent {dvr|Control}
+DirectvIntent {exit|Control}
+DirectvIntent {end|Control}
+DirectvIntent {leave|Control}
+DirectvIntent {go back|Control}
+DirectvIntent {back|Control}
+DirectvIntent {go to menu|Control}
+DirectvIntent {menu|Control}
+DirectvIntent {main menu|Control}
+DirectvIntent {go to info|Control}
+DirectvIntent {info|Control}
+DirectvIntent {find info|Control}
+DirectvIntent {go up|Control}
+DirectvIntent {move up|Control}
+DirectvIntent {up|Control}
+DirectvIntent {go down|Control}
+DirectvIntent {move down|Control}
+DirectvIntent {down|Control}
+DirectvIntent {go left|Control}
+DirectvIntent {move left|Control}
+DirectvIntent {left|Control}
+DirectvIntent {go right|Control}
+DirectvIntent {move right|Control}
+DirectvIntent {right|Control}
+DirectvIntent {select|Control}
+DirectvIntent {enter|Control}
+DirectvIntent {to enter|Control}
+DirectvIntent {red button|Control}
+DirectvIntent {delete all|Control}
+DirectvIntent {green button|Control}
+DirectvIntent {yellow button|Control}
+DirectvIntent {blue|Control}
+DirectvIntent {channel up|Control}
+DirectvIntent {page up|Control}
+DirectvIntent {channel down|Control}
+DirectvIntent {page down|Control}
+DirectvIntent {previous channel|Control}
+DirectvIntent {last channel|Control}
+DirectvIntent {go back to last channel|Control}
+DirectvIntent {change it back to what I was watching|Control}
+DirectvIntent {dash|Control}
+
