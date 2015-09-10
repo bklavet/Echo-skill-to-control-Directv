@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "DirectvIntent",
+      "slots": [
+        {
+          "name": "Control",
+          "type": "LITERAL"
+        }
+      ]
+    }
+  ]
+}
