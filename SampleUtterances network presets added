@@ -1,0 +1,207 @@
+DirectvIntent {to play|Control}
+DirectvIntent {play|Control}
+DirectvIntent {resume|Control}
+DirectvIntent {to pause|Control}
+DirectvIntent {pause|Control}
+DirectvIntent {freeze|Control}
+DirectvIntent {go to guide|Control}
+DirectvIntent {open guide|Control}
+DirectvIntent {power|Control}
+DirectvIntent {to turn on|Control}
+DirectvIntent {power up|Control}
+DirectvIntent {power on|Control}
+DirectvIntent {to turn the power off|Control}
+DirectvIntent {to turn off|Control}
+DirectvIntent {power off|Control}
+DirectvIntent {power down|Control}
+DirectvIntent {format|Control}
+DirectvIntent {to rewind|Control}
+DirectvIntent {rewind|Control}
+DirectvIntent {to replay|Control}
+DirectvIntent {replay|Control}
+DirectvIntent {to stop|Control}
+DirectvIntent {stop|Control}
+DirectvIntent {advance|Control}
+DirectvIntent {to fast forward|Control}
+DirectvIntent {fast forward|Control}
+DirectvIntent {to record|Control}
+DirectvIntent {record|Control}
+DirectvIntent {save|Control}
+DirectvIntent {active|Control}
+DirectvIntent {go to list|Control}
+DirectvIntent {list|Control}
+DirectvIntent {find recorded shows|Control}
+DirectvIntent {dvr|Control}
+DirectvIntent {exit|Control}
+DirectvIntent {end|Control}
+DirectvIntent {leave|Control}
+DirectvIntent {go back|Control}
+DirectvIntent {back|Control}
+DirectvIntent {go to menu|Control}
+DirectvIntent {menu|Control}
+DirectvIntent {main menu|Control}
+DirectvIntent {go to info|Control}
+DirectvIntent {info|Control}
+DirectvIntent {find info|Control}
+DirectvIntent {go up|Control}
+DirectvIntent {move up|Control}
+DirectvIntent {up|Control}
+DirectvIntent {go down|Control}
+DirectvIntent {move down|Control}
+DirectvIntent {down|Control}
+DirectvIntent {go left|Control}
+DirectvIntent {move left|Control}
+DirectvIntent {left|Control}
+DirectvIntent {go right|Control}
+DirectvIntent {move right|Control}
+DirectvIntent {right|Control}
+DirectvIntent {select|Control}
+DirectvIntent {enter|Control}
+DirectvIntent {to enter|Control}
+DirectvIntent {red button|Control}
+DirectvIntent {delete all|Control}
+DirectvIntent {green button|Control}
+DirectvIntent {yellow button|Control}
+DirectvIntent {blue|Control}
+DirectvIntent {channel up|Control}
+DirectvIntent {page up|Control}
+DirectvIntent {channel down|Control}
+DirectvIntent {page down|Control}
+DirectvIntent {previous channel|Control}
+DirectvIntent {last channel|Control}
+DirectvIntent {go back to last channel|Control}
+DirectvIntent {change it back to what I was watching|Control}
+DirectvIntent {dash|Control}
+DirectvIntent {CNN|Control}
+DirectvIntent {to turn on CNN|Control}
+DirectvIntent {tune to CNN|Control}
+DirectvIntent {change channel to CNN|Control}
+DirectvIntent {ane|Control}
+DirectvIntent {to turn on ane|Control}
+DirectvIntent {tune to ane|Control}
+DirectvIntent {change channel to ane|Control}
+DirectvIntent {amc|Control}
+DirectvIntent {to turn on amc|Control}
+DirectvIntent {tune to amc|Control}
+DirectvIntent {change channel to amc|Control}
+DirectvIntent {animal planet|Control}
+DirectvIntent {to turn on animal planet|Control}
+DirectvIntent {tune to animal planet|Control}
+DirectvIntent {change channel to animal planet|Control}
+DirectvIntent {bet|Control}
+DirectvIntent {to turn on bet|Control}
+DirectvIntent {tune to bet|Control}
+DirectvIntent {change channel to bet|Control}
+DirectvIntent {bravo|Control}
+DirectvIntent {to turn on bravo|Control}
+DirectvIntent {tune to bravo|Control}
+DirectvIntent {change channel to bravo|Control}
+DirectvIntent {comedy central|Control}
+DirectvIntent {to turn on comedy central|Control}
+DirectvIntent {tune to comedy central|Control}
+DirectvIntent {change channel to comedy central|Control}
+DirectvIntent {c span|Control}
+DirectvIntent {to turn on c span|Control}
+DirectvIntent {tune to c span|Control}
+DirectvIntent {change channel to c span|Control}
+DirectvIntent {cartoon network|Control}
+DirectvIntent {to turn on cartoon network|Control}
+DirectvIntent {tune to cartoon network|Control}
+DirectvIntent {change channel to cartoon network|Control}
+DirectvIntent {discovery|Control}
+DirectvIntent {to turn on discovery|Control}
+DirectvIntent {tune to discovery|Control}
+DirectvIntent {change channel to discovery|Control}
+DirectvIntent {disney channel|Control}
+DirectvIntent {to turn on disney channel|Control}
+DirectvIntent {tune to disney channel|Control}
+DirectvIntent {change channel to disney channel|Control}
+DirectvIntent {disney junior|Control}
+DirectvIntent {to turn on disney junior|Control}
+DirectvIntent {tune to disney junior|Control}
+DirectvIntent {change channel to disney junior|Control}
+DirectvIntent {disney xd|Control}
+DirectvIntent {to turn on disney xd|Control}
+DirectvIntent {tune to disney xd|Control}
+DirectvIntent {change channel to disney xd|Control}
+DirectvIntent {food network|Control}
+DirectvIntent {to turn on food network|Control}
+DirectvIntent {tune to food network|Control}
+DirectvIntent {change channel to food network|Control}
+DirectvIntent {fox|Control}
+DirectvIntent {to turn on fox|Control}
+DirectvIntent {tune to fox|Control}
+DirectvIntent {change channel to fox|Control}
+DirectvIntent {fx|Control}
+DirectvIntent {to turn on fx|Control}
+DirectvIntent {tune to fx|Control}
+DirectvIntent {change channel to fx|Control}
+DirectvIntent {hgtv|Control}
+DirectvIntent {to turn on hgtv|Control}
+DirectvIntent {tune to hgtv|Control}
+DirectvIntent {change channel to hgtv|Control}
+DirectvIntent {history channel|Control}
+DirectvIntent {to turn on history channel|Control}
+DirectvIntent {tune to history channel|Control}
+DirectvIntent {change channel to history channel|Control}
+DirectvIntent {lifetime|Control}
+DirectvIntent {to turn on lifetime|Control}
+DirectvIntent {tune to lifetime|Control}
+DirectvIntent {change channel to lifetime|Control}
+DirectvIntent {msnbc|Control}
+DirectvIntent {to turn on msnbc|Control}
+DirectvIntent {tune to msnbc|Control}
+DirectvIntent {change channel to msnbc|Control}
+DirectvIntent {mtv|Control}
+DirectvIntent {to turn on mtv|Control}
+DirectvIntent {tune to mtv|Control}
+DirectvIntent {change channel to mtv|Control}
+DirectvIntent {mtv two|Control}
+DirectvIntent {to turn on mtv two|Control}
+DirectvIntent {tune to mtv two|Control}
+DirectvIntent {change channel to mtv two|Control}
+DirectvIntent {national geographic channel|Control}
+DirectvIntent {to turn on national geographic channel|Control}
+DirectvIntent {tune to national geographic channel|Control}
+DirectvIntent {change channel to national geographic channel|Control}
+DirectvIntent {national geographic|Control}
+DirectvIntent {to turn on national geographic|Control}
+DirectvIntent {tune to national geographic|Control}
+DirectvIntent {change channel to national geographic|Control}
+DirectvIntent {nick junior|Control}
+DirectvIntent {to turn on nick junior|Control}
+DirectvIntent {tune to nick junior|Control}
+DirectvIntent {change channel to nick junior|Control}
+DirectvIntent {spike|Control}
+DirectvIntent {to turn on spike|Control}
+DirectvIntent {tune to spike|Control}
+DirectvIntent {change channel to spike|Control}
+DirectvIntent {syfy|Control}
+DirectvIntent {to turn on syfy|Control}
+DirectvIntent {tune to syfy|Control}
+DirectvIntent {change channel to syfy|Control}
+DirectvIntent {tbs|Control}
+DirectvIntent {to turn on tbs|Control}
+DirectvIntent {tune to tbs|Control}
+DirectvIntent {change channel to tbs|Control}
+DirectvIntent {tnt|Control}
+DirectvIntent {to turn on tnt|Control}
+DirectvIntent {tune to tnt|Control}
+DirectvIntent {change channel to tnt|Control}
+DirectvIntent {true tv|Control}
+DirectvIntent {to turn on true tv|Control}
+DirectvIntent {tune to true tv|Control}
+DirectvIntent {change channel to true tv|Control}
+DirectvIntent {vh one|Control}
+DirectvIntent {to turn on vh one|Control}
+DirectvIntent {tune to vh one|Control}
+DirectvIntent {change channel to vh one|Control}
+DirectvIntent {espn|Control}
+DirectvIntent {to turn on espn|Control}
+DirectvIntent {tune to espn|Control}
+DirectvIntent {change channel to espn|Control}
+DirectvIntent {espn two|Control}
+DirectvIntent {to turn on espn two|Control}
+DirectvIntent {tune to espn two|Control}
+DirectvIntent {change channel to espn two|Control}
+
