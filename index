@@ -1,37 +1,40 @@
-var http = require('http');
+var http = require('http'); // if going through a proxy that uses SSL change to "require('https');"
 
 // Your external IP. Alexa can only access publically-accessible IPs. No LAN access unfortunately.
-// Make sure to set up port fortwarding on port 8080 to your Roku's IP on your router.
+// Make sure to set up port forwarding on port 8080 to your DTV's IP on your router.
 // In my case I had to move receiver to DMZ
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var local_ip = 'xxx.xxx.xxx.xxx';//external IP//////////////////////////////////////////////////////////////////////////
+var local_ip = 'xxx.xxx.xxx.xxx';
+//externalIP or FQDN //////////////////////////////////////////////////////////////////////////
+//var local_ip = '<some fqdn>';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * App ID for the skill
  */
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var APP_ID = ; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";///////////////////////////////////////
+var APP_ID = "amzn1.echo-sdk-ams.app.[APPID]"; 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * The AlexaSkill prototype and helper functions
  */
 var AlexaSkill = require('./AlexaSkill');
    
-var RokuControl = function () {
+var DTVControl = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
 
 // Extend AlexaSkill
-RokuControl.prototype = Object.create(AlexaSkill.prototype);
-RokuControl.prototype.constructor = RokuControl;
+DTVControl.prototype = Object.create(AlexaSkill.prototype);
+DTVControl.prototype.constructor = DTVControl;
 
+//Ignore Certificate errors if using HTTPS communication
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-
-RokuControl.prototype.intentHandlers = {
-        RokuIntent: function (intent, session, response) {
+DTVControl.prototype.intentHandlers = {
+        DirectvIntent: function (intent, session, response) {
         
         //No matter what she wants to tell you her opinion.
         
@@ -47,440 +50,194 @@ RokuControl.prototype.intentHandlers = {
                 case "to play":
 				case "play":
 				case "resume":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=play&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                      path = '/remote/processKey?key=play&hold=keyPress';
                 break;
-                
+           
 				case "to pause":
 				case "pause":
 				case "freeze":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=pause&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                       path = '/remote/processKey?key=pause&hold=keyPress';
                 break;
 				
 				case "go to guide":
 				case "open guide":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=guide&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                        path = '/remote/processKey?key=guide&hold=keyPress'
                 break;
 				
 				case "power":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=power&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                        path = '/remote/processKey?key=power&hold=keyPress';
                 break;
 				
 				case "to turn on":
 				case "power up":
 				case "power on":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=poweron&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                       path = '/remote/processKey?key=poweron&hold=keyPress';
                 break;
 				
 				case "turn the power off":
 				case "turn off":
 				case "power off":
 				case "power down":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=poweroff&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                       path = '/remote/processKey?key=poweroff&hold=keyPress';
                 break;
 				
 				case "format":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=format&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                       path = '/remote/processKey?key=format&hold=keyPress';
                 break;
 				
 				case "to rewind":
 				case "rewind":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=rew&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                       path = '/remote/processKey?key=rew&hold=keyPress';
                 break;
 				
 				case "to replay":
 				case "replay":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=replay&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                         path = '/remote/processKey?key=replay&hold=keyPress';
                 break;
 				
 				case "to stop":
 				case "stop":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=stop&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                          path= '/remote/processKey?key=stop&hold=keyPress';
                 break;
 				
 				case "advance":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=advance&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=advance&hold=keyPress';
                 break;
 				
 				case "to fast forward":
 				case "fast forward":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=ffwd&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path = '/remote/processKey?key=ffwd&hold=keyPress';
                 break;
 				
 				case "to record":
 				case "record":
 				case "save":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=record&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path = '/remote/processKey?key=record&hold=keyPress'
                 break;
 				
 				case "active":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=active&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=active&hold=keyPress';
                 break;
 				
 				case "go to list":
 				case "list":
 				case "find recorded shows":
 				case "DVR":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=list&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path = '/remote/processKey?key=list&hold=keyPress';
                 break;
 				
 				case "exit":
 				case "end":
 				case "leave":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=exit&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path = '/remote/processKey?key=exit&hold=keyPress';
                 break;
 				
 				case "go back":
 				case "back":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=back&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=back&hold=keyPress';
                 break;
 				
 				case "go to menu":
 				case "menu":
 				case "main menu":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=menu&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path = '/remote/processKey?key=menu&hold=keyPress';
                 break;
 				
 				case "go to info":
 				case "info":
 				case "find info":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=info&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=info&hold=keyPress';
                 break;
 				
 				case "go up":
 				case "move up":
 				case "up":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=up&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+
+                                path = '/remote/processKey?key=up&hold=keyPress';
                 break;
 				
 				case "go down":
 				case "move down":
 				case "down":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=down&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path = '/remote/processKey?key=down&hold=keyPress';
                 break;
 				
 				case "go left":
 				case "move left":
 				case "left":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=left&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=left&hold=keyPress';
                 break;
 				
 				case "go right":
 				case "move right":
 				case "right":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=right&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=right&hold=keyPress';
                 break;
 				
 				case "select":
 				case "enter":
 				case "to enter":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=select&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path=  '/remote/processKey?key=select&hold=keyPress';
                 break;
 				
 				case "red button":
 				case "delete all":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=red&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=red&hold=keyPress';
                 break;
 				
 				case "green button":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=green&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=green&hold=keyPress';
                 break;
 				
 				case "yellow button":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=yellow&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+
+                                path= '/remote/processKey?key=yellow&hold=keyPress';
                 break;
 				
 				case "blue button":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=blue&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=blue&hold=keyPress';
                 break;
 				
 				case "channel up":
-				case "page up":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=chanup&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                                path= '/remote/processKey?key=chanup&hold=keyPress';
                 break;
 				
 				case "channel down":
 				case "page down":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=chandown&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                     path = '/remote/processKey?key=chandown&hold=keyPress';
                 break;
 				
 				case "previous channel":
 				case "last channel":
 				case "go back to the last channel":
 				case "change it back to what i was watching":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=prev&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                        path= '/remote/processKey?key=prev&hold=keyPress';
                 break;
 				
 				case "dash":
-                        var options = {
-                                host: local_ip,
-                                port: 8080,
-                                path: '/remote/processKey?key=dash&hold=keyPress',
-                                method: 'POST'
-                        };
-                        
-                        var req = http.request(options, satisfyAlexa);
-                        req.end();
+                        path = '/remote/processKey?key=dash&hold=keyPress';
                 break;
         
                 default:
                         response.tell("I didn't hear an option.");
                 break;       
                 
-        }  
+        } 
+		var options = {
+                     host: local_ip,
+                     port: 8080, // default port for DTV interface
+                     path: '' + path, // Modify if path is prefixed 
+                     method: 'GET' //, //(remove first comment slashes if using the "auth" option below)
+					 // auth: 'username:password' // this is used if going through authenticated proxy (this is BASIC AUTH)
+                    };
+          var req = http.request(options, satisfyAlexa);
+          req.end();						
         }
 }
 
 exports.handler = function (event, context) {
        
-        var rokuControl = new RokuControl();
-        rokuControl.execute(event, context);
+        var dtvControl = new DTVControl();
+        dtvControl.execute(event, context);
         
 };
