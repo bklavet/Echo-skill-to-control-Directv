@@ -217,6 +217,14 @@ DTVControl.prototype.intentHandlers = {
 				case "dash":
                         path = '/remote/processKey?key=dash&hold=keyPress';
                 break;
+               	case "channel":
+		     if (intent.slots.Channel.value == null) {
+                         response.tell("I didn't understand the channel number you wanted.");
+                        }
+		    else {
+                         path = '/tv/tune?major=' + intent.slots.Channel.value 	;
+                      }					 
+                break;
         
                 default:
                         response.tell("I didn't hear an option.");
