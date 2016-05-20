@@ -72,4 +72,4 @@ DirectvIntent {last channel|Control}
 DirectvIntent {go back to last channel|Control}
 DirectvIntent {change it back to what I was watching|Control}
 DirectvIntent {dash|Control}
-
+DirectvIntent {channel|Control} {Channel}
