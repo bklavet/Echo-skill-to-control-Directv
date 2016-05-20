@@ -6,6 +6,10 @@
         {
           "name": "Control",
           "type": "LITERAL"
+        },
+        {
+          "name": "Channel",
+          "type": "AMAZON.NUMBER"
         }
       ]
     }
