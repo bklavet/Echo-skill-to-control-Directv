@@ -320,7 +320,7 @@ DTVControl.prototype.intentHandlers = {
         
 				
 				default:
-                        default:
+                
                         if (intent.slots.Channel.value == null) {
                          response.tell("I didn't understand.");
                       }
