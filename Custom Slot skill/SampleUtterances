@@ -24,4 +24,45 @@ DirectvIntent to {Control}
 DirectvIntent too {Control}
 DirectvIntent {Control} now
 DirectvIntent {Control} right now
+DirectvIntent {Control} please
 DirectvIntent {Channel}
+DirectvIntent hows about {Channel}
+DirectvIntent hows about channel {Channel}
+DirectvIntent change to {Channel}
+DirectvIntent change to channel {Channel}
+DirectvIntent find {Channel}
+DirectvIntent find channel {Channel}
+DirectvIntent go to {Channel}
+DirectvIntent go to channel {Channel}
+DirectvIntent turn on {Channel}
+DirectvIntent turn on channel {Channel}
+DirectvIntent go back to {Channel}
+DirectvIntent go back to channel {Channel}
+DirectvIntent back to {Channel}
+DirectvIntent back to channel {Channel}
+DirectvIntent try {Channel}
+DirectvIntent try channel {Channel}
+DirectvIntent tune in to {Channel}
+DirectvIntent tune into {Channel}
+DirectvIntent tune into channel {Channel}
+DirectvIntent get me {Channel}
+DirectvIntent get me channel {Channel}
+DirectvIntent get me the {Channel}
+DirectvIntent get me the channel {Channel}
+DirectvIntent fetch me {Channel}
+DirectvIntent fetch me the channel {Channel}
+DirectvIntent see whats on {Channel}
+DirectvIntent see whats on channel {Channel}
+DirectvIntent see what is on {Channel}
+DirectvIntent see what is on channel {Channel}
+DirectvIntent whats on {Channel}
+DirectvIntent what is on {Channel}
+DirectvIntent go {Channel}
+DirectvIntent change the channel to {Channel}
+DirectvIntent turn the channel to {Channel}
+DirectvIntent make it {Channel}
+DirectvIntent how about {Channel}
+DirectvIntent how about channel {Channel}
+DirectvIntent {Channel} now
+DirectvIntent {Channel} right now
+DirectvIntent {Channel} please
