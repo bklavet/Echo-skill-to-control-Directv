@@ -1,0 +1,69 @@
+play
+resume
+pause
+freeze
+guide
+power
+turn on
+turn off
+format
+rewind
+replay
+stop
+advance
+fast forward
+record
+save
+active
+list
+recorded shows
+DVR
+exit
+end
+leave
+back
+menu
+info
+up
+down
+left
+right
+select
+enter
+channel up
+page up
+channel down
+page down
+previous
+CNN
+A&E
+AMC
+animal planet
+BET
+bravo
+comedy central
+C span
+cartoon network
+discovery
+disney channel
+disney junior
+disney x.d.
+food network
+fox
+FX
+HGTV
+history channel
+lifetime
+MSNBC
+MTV
+MTV two
+national geographic
+nick junior
+spike
+syfy
+TBS
+TNT
+true TV
+VH one
+ESPN
+ESPN two
