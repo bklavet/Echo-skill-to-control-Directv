@@ -43,16 +43,6 @@ DTVControl.prototype.intentHandlers = {
                         };
         
         // Obtain User Intent
-		switch(intents.slots.Channel.value) {
-						if (intent.slots.Channel.value == null) {
-                         response.tell("I didn't understand the channel number you wanted.");
-                      }
-						else {
-                         path = '/tv/tune?major=' + intent.slots.Channel.value 	;
-                      }					 
-                break;
-				}
-
         switch(intent.slots.Control.value) {
                 
                 // Same button is used
