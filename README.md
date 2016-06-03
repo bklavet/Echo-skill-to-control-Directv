@@ -42,12 +42,12 @@ Go BACK to your developer.amazon.com account and go to the Alexa page.
 	Click "No" on the Account Linking for now.
 	Click Next.
 	If all is good, you will be able be done for now. There is no need to go to the "Publishing Information" 
-	********************************************************************************************
-	For Custom Slot Setup walkthrough
-	********************************************************************************************
-	This is a walkthrough to set up a skill using the contents of the "Custom Slot skill" folder.
+
+# For Custom Slot Setup walkthrough
+
+This is a walkthrough to set up a skill using the contents of the "Custom Slot skill" folder.
 	
-	Open the "index" file and replace with your AppID
+Open the "index" file and replace with your AppID
 
 Login to your developer.amazon.com account and go to the Alexa page.
     Click "Get Started" under the "Alexa Skills Kit"
