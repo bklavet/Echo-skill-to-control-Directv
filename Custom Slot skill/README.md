@@ -1,4 +1,10 @@
 # Echo-skill-to-control-Directv
+This is the Echo-skill-to-control-Directv skill using a Custom Slot in the Alexa Skill Kit.
+I have found this to be a better way of doing things.
+
+The setup for this is almost the same with the exception of adding a custom slot name and then adding the "custom slot values.txt " file.
+I have included additional steps to mawrew19's walkthrough below to help make it easier for a first timer.
+
 This is an amazon echo skill that will control a networked Directv Receiver so that users can control Directv with their voice
 
 This is a hack job on another GitHub Repository: https://github.com/MrEggsalad/Echo-Roku-Voice-Control
@@ -8,7 +14,6 @@ Thanks to mawrew19, The skill now works!
 =======================
 [mawrew19 update]
 Open the "index" file and replace with your AppID
-If you wish to use the "Test Event" in the Lambda Management console, copy and paste the text of the "TestEvent_Sample.txt" and replace with your AppID.
 
 Login to your developer.amazon.com account and go to the Alexa page.
     Click "Get Started" under the "Alexa Skills Kit"
@@ -34,8 +39,10 @@ Go BACK to your developer.amazon.com account and go to the Alexa page.
     Click "Get Started" under the "Alexa Skills Kit"
     Click "Edit" next to the Skill you already created.
 	Click Next
-	Copy the Contents of the "IntentSchema" file into the "IntentSchema" text area
-	Copy the Contents of the "SampleUtterance" file into the "SampleUtterance" text area
+	Copy the Contents of the "IntentSchema" file into the "IntentSchema" text area from the "custom slot folder" above
+	click on the tap labled "Add slot type" by Custom Slot Types. In the window that opens place type Control_List under Enter Type.
+	paste the Custom Slot Values.txt file in the "Enter Values" tab, and hit Ok.
+	Copy the Contents of the "SampleUtterance" file from the "custom slot folder" above into the "SampleUtterance" text area
 	Click "Next"
 	If everything is good, you will now be able to put the ARN value you noted from the Lambda Function you previously created.
 	Click on the "Lambda ARN..." bullet and paste that value in.
