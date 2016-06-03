@@ -3,15 +3,12 @@ This is an amazon echo skill that will control a networked Directv Receiver so t
 
 This is a hack job on another GitHub Repository: https://github.com/MrEggsalad/Echo-Roku-Voice-Control
 
-<<<<<<< HEAD
+
 Thanks to mawrew19, The skill now works!  
 
-=======
->>>>>>> origin/master
 =======================
 [mawrew19 update]
 Open the "index" file and replace with your AppID
-If you wish to use the "Test Event" in the Lambda Management console, copy and paste the text of the "TestEvent_Sample.txt" and replace with your AppID.
 
 Login to your developer.amazon.com account and go to the Alexa page.
     Click "Get Started" under the "Alexa Skills Kit"
@@ -37,8 +34,9 @@ Go BACK to your developer.amazon.com account and go to the Alexa page.
     Click "Get Started" under the "Alexa Skills Kit"
     Click "Edit" next to the Skill you already created.
 	Click Next
-	Copy the Contents of the "IntentSchema" file into the "IntentSchema" text area
-	Copy the Contents of the "SampleUtterance" file into the "SampleUtterance" text area
+	Copy the Contents of the "IntentSchema" file from the "Custom Slot skill" folder above into the "IntentSchema" text area
+	Click on "Add Slot Type" by the section named Custom Slot Type.  Enter Control_List for the "Enter Type" section.  Cut and paste the custom slot values.txt file in the section labled "EnterValues".  Click OK
+	Copy the Contents of the "SampleUtterance" file from the "Custom Slot skill" folder above into the "SampleUtterance" text area
 	Click "Next"
 	If everything is good, you will now be able to put the ARN value you noted from the Lambda Function you previously created.
 	Click on the "Lambda ARN..." bullet and paste that value in.
