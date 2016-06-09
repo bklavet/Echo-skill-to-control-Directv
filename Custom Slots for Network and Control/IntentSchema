@@ -1,0 +1,18 @@
+{
+  "intents": [
+    {
+      "intent": "DirectvIntent",
+      "slots": [
+        {
+          "name": "Control",
+          "type": "Control_List"
+        },
+        {
+          "name": "Channel",
+          "type": "AMAZON.NUMBER"
+        }
+        
+      ]
+    }
+  ]
+}
