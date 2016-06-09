@@ -6,13 +6,26 @@
         {
           "name": "Control",
           "type": "Control_List"
-        },
-        {
-          "name": "Channel",
-          "type": "AMAZON.NUMBER"
-        }
-        
+        } 
       ]
-    }
+    },
+	{
+	"intent": "ChannelIntent",
+	"slots": [
+	{
+		"name": "Channel",
+		"type": "AMAZON.NUMBER"
+		}
+		]
+	},
+	{
+	"intent": "NetworkIntent",
+	"slots": [
+	{
+		"name": "Network",
+		"type": "Network_List"
+		}
   ]
+}
+]
 }
