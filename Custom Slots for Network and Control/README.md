@@ -1,6 +1,6 @@
-# For Custom Slot Setup walkthrough
+# For Custom Slots for Network and Control
 
-This is a walkthrough to set up a skill using the contents of the "Custom Slot skill" folder.
+This is a walkthrough to set up a skill using the contents of the "Custom Slots for Network and Control" folder.
 	
 Open the "index" file and replace with your AppID
 
@@ -29,7 +29,8 @@ Go BACK to your developer.amazon.com account and go to the Alexa page.
     Click "Edit" next to the Skill you already created.
 	Click Next
 	Copy the Contents of the "IntentSchema" file from the "Custom Slot skill" folder above into the "IntentSchema" text area
-	Click on "Add Slot Type" by the section named Custom Slot Type.  Enter Control_List for the "Enter Type" section.  Cut and paste the custom slot values.txt file in the section labled "EnterValues".  Click OK
+	Click on "Add Slot Type" by the section named Custom Slot Type.  Enter Control_List for the "Enter Type" section.  Cut and paste the custom slot values Control_List.txt file in the section labled "EnterValues".  Click OK
+	Click on "Add Slot Type" by the section named Custom Slot Type.  Enter Network_List for the "Enter Type" section.  Cut and paste the custom slot values Network_List.txt file in the section labled "EnterValues".  Click OK
 	Copy the Contents of the "SampleUtterance" file from the "Custom Slot skill" folder above into the "SampleUtterance" text area
 	Click "Next"
 	If everything is good, you will now be able to put the ARN value you noted from the Lambda Function you previously created.
