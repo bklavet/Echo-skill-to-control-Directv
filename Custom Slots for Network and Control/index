@@ -184,7 +184,7 @@ DTVControl.prototype.intentHandlers = {
                         response.tell("Let me get that.");
                         };
 						
-                        if (intent.slots.Channel.value == "?" || intents.slots.Channel.value == nan) {
+                        if (intent.slots.Channel.value == "?") {
                          response.tell("I didn't hear the number you wanted. Want to try asking one more time?");
                       }
 						else {
