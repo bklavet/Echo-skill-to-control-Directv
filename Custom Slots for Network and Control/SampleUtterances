@@ -1,4 +1,5 @@
 ChannelIntent change it to {Channel}
+ChannelIntent change it to channel {Channel}
 ChannelIntent change the TV number to {Channel}
 ChannelIntent change the TV to {Channel}
 ChannelIntent change the channel number to {Channel}
