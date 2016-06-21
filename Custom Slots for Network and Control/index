@@ -159,7 +159,7 @@ DTVControl.prototype.intentHandlers = {
                 break;
 				
 				default:
-                         response.tell("I'm sorry, but I got alot going on.  Wnat to try again?");
+                         response.tell("I'm sorry, but I got alot going on.  Want to try again?");
                       	
                 break;
 			
