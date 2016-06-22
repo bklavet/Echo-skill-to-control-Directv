@@ -1,81 +1,198 @@
-ChannelIntent change it to {Channel}
 ChannelIntent change it to channel {Channel}
+ChannelIntent change it to {Channel}
+ChannelIntent change the TV number to channel {Channel}
 ChannelIntent change the TV number to {Channel}
+ChannelIntent change the TV to channel {Channel}
 ChannelIntent change the TV to {Channel}
+ChannelIntent change the channel number to channel {Channel}
 ChannelIntent change the channel number to {Channel}
+ChannelIntent change the channel to channel {Channel}
 ChannelIntent change the channel to {Channel}
+ChannelIntent change the station to channel {Channel}
 ChannelIntent change the station to {Channel}
+ChannelIntent change to channel {Channel}
 ChannelIntent change to {Channel}
+ChannelIntent channel {Channel}
+ChannelIntent find it to channel {Channel}
 ChannelIntent find it to {Channel}
+ChannelIntent get channel {Channel}
+ChannelIntent get it to channel {Channel}
 ChannelIntent get it to {Channel}
+ChannelIntent get the TV number to channel {Channel}
 ChannelIntent get the TV number to {Channel}
+ChannelIntent get the TV to channel {Channel}
 ChannelIntent get the TV to {Channel}
+ChannelIntent get the channel number to channel {Channel}
 ChannelIntent get the channel number to {Channel}
+ChannelIntent get the channel to channel {Channel}
 ChannelIntent get the channel to {Channel}
+ChannelIntent get the station to channel {Channel}
 ChannelIntent get the station to {Channel}
+ChannelIntent get to channel channel {Channel}
 ChannelIntent get to channel {Channel}
 ChannelIntent get {Channel}
+ChannelIntent go and change it to channel {Channel}
+ChannelIntent go and change it to {Channel}
+ChannelIntent go and change the TV number to channel {Channel}
+ChannelIntent go and change the TV number to {Channel}
+ChannelIntent go and change the TV to channel {Channel}
+ChannelIntent go and change the TV to {Channel}
+ChannelIntent go and change the channel number to channel {Channel}
+ChannelIntent go and change the channel number to {Channel}
+ChannelIntent go and change the channel to channel {Channel}
+ChannelIntent go and change the channel to {Channel}
+ChannelIntent go and change the station to channel {Channel}
+ChannelIntent go and change the station to {Channel}
+ChannelIntent go and find it to channel {Channel}
+ChannelIntent go and find it to {Channel}
+ChannelIntent go and get it to channel {Channel}
+ChannelIntent go and get it to {Channel}
+ChannelIntent go and get the TV number to channel {Channel}
+ChannelIntent go and get the TV number to {Channel}
+ChannelIntent go and get the TV to channel {Channel}
+ChannelIntent go and get the TV to {Channel}
+ChannelIntent go and get the channel number to channel {Channel}
+ChannelIntent go and get the channel number to {Channel}
+ChannelIntent go and get the channel to channel {Channel}
+ChannelIntent go and get the channel to {Channel}
+ChannelIntent go and get the station to channel {Channel}
+ChannelIntent go and get the station to {Channel}
+ChannelIntent go and make it to channel {Channel}
+ChannelIntent go and make it to {Channel}
+ChannelIntent go and make the TV channel {Channel}
+ChannelIntent go and make the TV {Channel}
+ChannelIntent go and make the channel channel {Channel}
+ChannelIntent go and make the channel {Channel}
+ChannelIntent go and make the station channel {Channel}
+ChannelIntent go and make the station {Channel}
+ChannelIntent go and switch it to channel {Channel}
+ChannelIntent go and switch it to {Channel}
+ChannelIntent go and switch the TV number to channel {Channel}
+ChannelIntent go and switch the TV number to {Channel}
+ChannelIntent go and switch the TV to channel {Channel}
+ChannelIntent go and switch the TV to {Channel}
+ChannelIntent go and switch the channel number to channel {Channel}
+ChannelIntent go and switch the channel number to {Channel}
+ChannelIntent go and switch the channel to channel {Channel}
+ChannelIntent go and switch the channel to {Channel}
+ChannelIntent go and switch the station to channel {Channel}
+ChannelIntent go and switch the station to {Channel}
+ChannelIntent make it to channel {Channel}
 ChannelIntent make it to {Channel}
+ChannelIntent make the TV channel {Channel}
 ChannelIntent make the TV {Channel}
+ChannelIntent make the channel channel {Channel}
 ChannelIntent make the channel {Channel}
+ChannelIntent make the station channel {Channel}
 ChannelIntent make the station {Channel}
+ChannelIntent switch it to channel {Channel}
 ChannelIntent switch it to {Channel}
+ChannelIntent switch the TV number to channel {Channel}
 ChannelIntent switch the TV number to {Channel}
+ChannelIntent switch the TV to channel {Channel}
 ChannelIntent switch the TV to {Channel}
+ChannelIntent switch the channel number to channel {Channel}
 ChannelIntent switch the channel number to {Channel}
+ChannelIntent switch the channel to channel {Channel}
 ChannelIntent switch the channel to {Channel}
+ChannelIntent switch the station to channel {Channel}
 ChannelIntent switch the station to {Channel}
+ChannelIntent switch to channel {Channel}
 ChannelIntent switch to {Channel}
+ChannelIntent try and change it to channel {Channel}
 ChannelIntent try and change it to {Channel}
+ChannelIntent try and change the TV number to channel {Channel}
 ChannelIntent try and change the TV number to {Channel}
+ChannelIntent try and change the TV to channel {Channel}
 ChannelIntent try and change the TV to {Channel}
+ChannelIntent try and change the channel number to channel {Channel}
 ChannelIntent try and change the channel number to {Channel}
+ChannelIntent try and change the channel to channel {Channel}
 ChannelIntent try and change the channel to {Channel}
+ChannelIntent try and change the station to channel {Channel}
 ChannelIntent try and change the station to {Channel}
+ChannelIntent try and find it to channel {Channel}
 ChannelIntent try and find it to {Channel}
+ChannelIntent try and get it to channel {Channel}
 ChannelIntent try and get it to {Channel}
+ChannelIntent try and get the TV number to channel {Channel}
 ChannelIntent try and get the TV number to {Channel}
+ChannelIntent try and get the TV to channel {Channel}
 ChannelIntent try and get the TV to {Channel}
+ChannelIntent try and get the channel number to channel {Channel}
 ChannelIntent try and get the channel number to {Channel}
+ChannelIntent try and get the channel to channel {Channel}
 ChannelIntent try and get the channel to {Channel}
+ChannelIntent try and get the station to channel {Channel}
 ChannelIntent try and get the station to {Channel}
+ChannelIntent try and make it to channel {Channel}
 ChannelIntent try and make it to {Channel}
+ChannelIntent try and make the TV channel {Channel}
 ChannelIntent try and make the TV {Channel}
+ChannelIntent try and make the channel channel {Channel}
 ChannelIntent try and make the channel {Channel}
+ChannelIntent try and make the station channel {Channel}
 ChannelIntent try and make the station {Channel}
+ChannelIntent try and switch it to channel {Channel}
 ChannelIntent try and switch it to {Channel}
+ChannelIntent try and switch the TV number to channel {Channel}
 ChannelIntent try and switch the TV number to {Channel}
+ChannelIntent try and switch the TV to channel {Channel}
 ChannelIntent try and switch the TV to {Channel}
+ChannelIntent try and switch the channel number to channel {Channel}
 ChannelIntent try and switch the channel number to {Channel}
+ChannelIntent try and switch the channel to channel {Channel}
 ChannelIntent try and switch the channel to {Channel}
+ChannelIntent try and switch the station to channel {Channel}
 ChannelIntent try and switch the station to {Channel}
+ChannelIntent try channel {Channel}
+ChannelIntent try to change it to channel {Channel}
 ChannelIntent try to change it to {Channel}
+ChannelIntent try to change the TV number to channel {Channel}
 ChannelIntent try to change the TV number to {Channel}
+ChannelIntent try to change the TV to channel {Channel}
 ChannelIntent try to change the TV to {Channel}
+ChannelIntent try to change the channel number to channel {Channel}
 ChannelIntent try to change the channel number to {Channel}
+ChannelIntent try to change the channel to channel {Channel}
 ChannelIntent try to change the channel to {Channel}
+ChannelIntent try to change the station to channel {Channel}
 ChannelIntent try to change the station to {Channel}
+ChannelIntent try to find it to channel {Channel}
 ChannelIntent try to find it to {Channel}
+ChannelIntent try to get it to channel {Channel}
 ChannelIntent try to get it to {Channel}
+ChannelIntent try to get the TV number to channel {Channel}
 ChannelIntent try to get the TV number to {Channel}
+ChannelIntent try to get the TV to channel {Channel}
 ChannelIntent try to get the TV to {Channel}
+ChannelIntent try to get the channel number to channel {Channel}
 ChannelIntent try to get the channel number to {Channel}
+ChannelIntent try to get the channel to channel {Channel}
 ChannelIntent try to get the channel to {Channel}
+ChannelIntent try to get the station to channel {Channel}
 ChannelIntent try to get the station to {Channel}
+ChannelIntent try to make it to channel {Channel}
 ChannelIntent try to make it to {Channel}
+ChannelIntent try to make the TV channel {Channel}
 ChannelIntent try to make the TV {Channel}
+ChannelIntent try to make the channel channel {Channel}
 ChannelIntent try to make the channel {Channel}
+ChannelIntent try to make the station channel {Channel}
 ChannelIntent try to make the station {Channel}
+ChannelIntent try to switch it to channel {Channel}
 ChannelIntent try to switch it to {Channel}
+ChannelIntent try to switch the TV number to channel {Channel}
 ChannelIntent try to switch the TV number to {Channel}
+ChannelIntent try to switch the TV to channel {Channel}
 ChannelIntent try to switch the TV to {Channel}
+ChannelIntent try to switch the channel number to channel {Channel}
 ChannelIntent try to switch the channel number to {Channel}
+ChannelIntent try to switch the channel to channel {Channel}
 ChannelIntent try to switch the channel to {Channel}
+ChannelIntent try to switch the station to channel {Channel}
 ChannelIntent try to switch the station to {Channel}
 ChannelIntent try {Channel}
-ChannelIntent turn on channel {Channel}
-ChannelIntent turn on the channel {Channel}
-ChannelIntent turn on {Channel}
 ChannelIntent {Channel}
 DirectvIntent back to {Control}
 DirectvIntent change the {Control} off
@@ -85,6 +202,22 @@ DirectvIntent change {Control} on
 DirectvIntent enter {Control}
 DirectvIntent find the {Control}
 DirectvIntent find {Control}
+DirectvIntent go and change the {Control} off
+DirectvIntent go and change the {Control} on
+DirectvIntent go and change {Control} off
+DirectvIntent go and change {Control} on
+DirectvIntent go and switch the {Control} off
+DirectvIntent go and switch the {Control} on
+DirectvIntent go and switch {Control} off
+DirectvIntent go and switch {Control} on
+DirectvIntent go and turn off the {Control}
+DirectvIntent go and turn off {Control}
+DirectvIntent go and turn on the {Control}
+DirectvIntent go and turn on {Control}
+DirectvIntent go and turn the {Control} off
+DirectvIntent go and turn the {Control} on
+DirectvIntent go and turn {Control} off
+DirectvIntent go and turn {Control} on
 DirectvIntent go back to {Control}
 DirectvIntent go to the {Control}
 DirectvIntent go to {Control}
@@ -160,7 +293,6 @@ DirectvIntent {Control}
 NetworkIntent change it back to the {Network} channel
 NetworkIntent change it back to the {Network} network
 NetworkIntent change it back to the {Network} station
-NetworkIntent change it back to {Network}
 NetworkIntent change it to the {Network} channel
 NetworkIntent change it to the {Network} network
 NetworkIntent change it to the {Network} station
@@ -170,7 +302,6 @@ NetworkIntent go to {Network}
 NetworkIntent switch it back to the {Network} channel
 NetworkIntent switch it back to the {Network} network
 NetworkIntent switch it back to the {Network} station
-NetworkIntent switch it back to {Network}
 NetworkIntent switch it to the {Network} channel
 NetworkIntent switch it to the {Network} network
 NetworkIntent switch it to the {Network} station
@@ -182,7 +313,6 @@ NetworkIntent switch to {Network}
 NetworkIntent try and change it back to the {Network} channel
 NetworkIntent try and change it back to the {Network} network
 NetworkIntent try and change it back to the {Network} station
-NetworkIntent try and change it back to {Network}
 NetworkIntent try and change it to the {Network} channel
 NetworkIntent try and change it to the {Network} network
 NetworkIntent try and change it to the {Network} station
@@ -191,7 +321,6 @@ NetworkIntent try and change to {Network}
 NetworkIntent try and switch it back to the {Network} channel
 NetworkIntent try and switch it back to the {Network} network
 NetworkIntent try and switch it back to the {Network} station
-NetworkIntent try and switch it back to {Network}
 NetworkIntent try and switch it to the {Network} channel
 NetworkIntent try and switch it to the {Network} network
 NetworkIntent try and switch it to the {Network} station
@@ -203,7 +332,6 @@ NetworkIntent try and switch to {Network}
 NetworkIntent try and turn it back to the {Network} channel
 NetworkIntent try and turn it back to the {Network} network
 NetworkIntent try and turn it back to the {Network} station
-NetworkIntent try and turn it back to {Network}
 NetworkIntent try and turn it to the {Network} channel
 NetworkIntent try and turn it to the {Network} network
 NetworkIntent try and turn it to the {Network} station
@@ -215,7 +343,6 @@ NetworkIntent try and turn to {Network}
 NetworkIntent try to change it back to the {Network} channel
 NetworkIntent try to change it back to the {Network} network
 NetworkIntent try to change it back to the {Network} station
-NetworkIntent try to change it back to {Network}
 NetworkIntent try to change it to the {Network} channel
 NetworkIntent try to change it to the {Network} network
 NetworkIntent try to change it to the {Network} station
@@ -224,7 +351,6 @@ NetworkIntent try to change to {Network}
 NetworkIntent try to switch it back to the {Network} channel
 NetworkIntent try to switch it back to the {Network} network
 NetworkIntent try to switch it back to the {Network} station
-NetworkIntent try to switch it back to {Network}
 NetworkIntent try to switch it to the {Network} channel
 NetworkIntent try to switch it to the {Network} network
 NetworkIntent try to switch it to the {Network} station
@@ -236,7 +362,6 @@ NetworkIntent try to switch to {Network}
 NetworkIntent try to turn it back to the {Network} channel
 NetworkIntent try to turn it back to the {Network} network
 NetworkIntent try to turn it back to the {Network} station
-NetworkIntent try to turn it back to {Network}
 NetworkIntent try to turn it to the {Network} channel
 NetworkIntent try to turn it to the {Network} network
 NetworkIntent try to turn it to the {Network} station
@@ -248,7 +373,6 @@ NetworkIntent try to turn to {Network}
 NetworkIntent turn it back to the {Network} channel
 NetworkIntent turn it back to the {Network} network
 NetworkIntent turn it back to the {Network} station
-NetworkIntent turn it back to {Network}
 NetworkIntent turn it to the {Network} channel
 NetworkIntent turn it to the {Network} network
 NetworkIntent turn it to the {Network} station
@@ -257,3 +381,4 @@ NetworkIntent turn on the {Network} channel
 NetworkIntent turn on the {Network} network
 NetworkIntent turn on the {Network} station
 NetworkIntent turn to {Network}
+NetworkIntent {Network}
