@@ -416,6 +416,7 @@ ChannelIntent {Channel}
 ChannelIntent {Channel}
 ChannelIntent {Channel}
 ChannelIntent {Channel} channel
+DirectvIntent bring up the {Control}
 DirectvIntent change it back to the {Control} channel
 DirectvIntent change it back to the {Control} network
 DirectvIntent change it back to the {Control} station
@@ -427,13 +428,51 @@ DirectvIntent change the {Control} on
 DirectvIntent change {Control} off
 DirectvIntent change {Control} on
 DirectvIntent find the {Control}
+DirectvIntent find the {Control}
 DirectvIntent find {Control}
+DirectvIntent get the {Control}
 DirectvIntent go and change the {Control} off
 DirectvIntent go and change the {Control} on
 DirectvIntent go and change {Control} off
 DirectvIntent go and change {Control} on
+DirectvIntent go and hit remote control {Control} button
+DirectvIntent go and hit remote {Control} button
+DirectvIntent go and hit the remote button {Control}
+DirectvIntent go and hit the remote control button {Control}
+DirectvIntent go and hit the remote control {Control}
+DirectvIntent go and hit the remote control {Control} button
+DirectvIntent go and hit the remote {Control}
+DirectvIntent go and hit the remote {Control} button
+DirectvIntent go and hit the {Control}
+DirectvIntent go and hit the {Control} button
+DirectvIntent go and hit {Control}
+DirectvIntent go and hit {Control} button
+DirectvIntent go and press remote control {Control} button
+DirectvIntent go and press remote {Control} button
+DirectvIntent go and press the remote button {Control}
+DirectvIntent go and press the remote control button {Control}
+DirectvIntent go and press the remote control {Control}
+DirectvIntent go and press the remote control {Control} button
+DirectvIntent go and press the remote {Control}
+DirectvIntent go and press the remote {Control} button
+DirectvIntent go and press the {Control}
+DirectvIntent go and press the {Control} button
+DirectvIntent go and press {Control}
+DirectvIntent go and press {Control} button
 DirectvIntent go and pull up the {Control}
 DirectvIntent go and pull up {Control}
+DirectvIntent go and push remote control {Control} button
+DirectvIntent go and push remote {Control} button
+DirectvIntent go and push the remote button {Control}
+DirectvIntent go and push the remote control button {Control}
+DirectvIntent go and push the remote control {Control}
+DirectvIntent go and push the remote control {Control} button
+DirectvIntent go and push the remote {Control}
+DirectvIntent go and push the remote {Control} button
+DirectvIntent go and push the {Control}
+DirectvIntent go and push the {Control} button
+DirectvIntent go and push {Control}
+DirectvIntent go and push {Control} button
 DirectvIntent go and switch the {Control} off
 DirectvIntent go and switch the {Control} on
 DirectvIntent go and switch {Control} off
@@ -447,10 +486,86 @@ DirectvIntent go and turn the {Control} on
 DirectvIntent go and turn {Control} off
 DirectvIntent go and turn {Control} on
 DirectvIntent go back to {Control}
+DirectvIntent go hit remote control {Control} button
+DirectvIntent go hit remote {Control} button
+DirectvIntent go hit the remote button {Control}
+DirectvIntent go hit the remote control button {Control}
+DirectvIntent go hit the remote control {Control}
+DirectvIntent go hit the remote control {Control} button
+DirectvIntent go hit the remote {Control}
+DirectvIntent go hit the remote {Control} button
+DirectvIntent go hit the {Control}
+DirectvIntent go hit the {Control} button
+DirectvIntent go hit {Control}
+DirectvIntent go hit {Control} button
+DirectvIntent go press remote control {Control} button
+DirectvIntent go press remote {Control} button
+DirectvIntent go press the remote button {Control}
+DirectvIntent go press the remote control button {Control}
+DirectvIntent go press the remote control {Control}
+DirectvIntent go press the remote control {Control} button
+DirectvIntent go press the remote {Control}
+DirectvIntent go press the remote {Control} button
+DirectvIntent go press the {Control}
+DirectvIntent go press the {Control} button
+DirectvIntent go press {Control}
+DirectvIntent go press {Control} button
+DirectvIntent go push remote control {Control} button
+DirectvIntent go push remote {Control} button
+DirectvIntent go push the remote button {Control}
+DirectvIntent go push the remote control button {Control}
+DirectvIntent go push the remote control {Control}
+DirectvIntent go push the remote control {Control} button
+DirectvIntent go push the remote {Control}
+DirectvIntent go push the remote {Control} button
+DirectvIntent go push the {Control}
+DirectvIntent go push the {Control} button
+DirectvIntent go push {Control}
+DirectvIntent go push {Control} button
+DirectvIntent go to the {Control}
 DirectvIntent go to the {Control}
 DirectvIntent go to {Control}
+DirectvIntent go to {Control}
+DirectvIntent go {Control}
+DirectvIntent hit remote control {Control} button
+DirectvIntent hit remote {Control} button
+DirectvIntent hit the remote button {Control}
+DirectvIntent hit the remote control button {Control}
+DirectvIntent hit the remote control {Control}
+DirectvIntent hit the remote control {Control} button
+DirectvIntent hit the remote {Control}
+DirectvIntent hit the remote {Control} button
+DirectvIntent hit the {Control}
+DirectvIntent hit the {Control} button
+DirectvIntent hit {Control}
+DirectvIntent hit {Control} button
+DirectvIntent press remote control {Control} button
+DirectvIntent press remote {Control} button
+DirectvIntent press the remote button {Control}
+DirectvIntent press the remote control button {Control}
+DirectvIntent press the remote control {Control}
+DirectvIntent press the remote control {Control} button
+DirectvIntent press the remote {Control}
+DirectvIntent press the remote {Control} button
+DirectvIntent press the {Control}
+DirectvIntent press the {Control} button
+DirectvIntent press {Control}
+DirectvIntent press {Control} button
+DirectvIntent pull up the {Control}
 DirectvIntent pull up the {Control}
 DirectvIntent pull up {Control}
+DirectvIntent push remote control {Control} button
+DirectvIntent push remote {Control} button
+DirectvIntent push the remote button {Control}
+DirectvIntent push the remote control button {Control}
+DirectvIntent push the remote control {Control}
+DirectvIntent push the remote control {Control} button
+DirectvIntent push the remote {Control}
+DirectvIntent push the remote {Control} button
+DirectvIntent push the {Control}
+DirectvIntent push the {Control} button
+DirectvIntent push {Control}
+DirectvIntent push {Control} button
 DirectvIntent switch it back to the {Control} channel
 DirectvIntent switch it back to the {Control} network
 DirectvIntent switch it back to the {Control} station
@@ -476,8 +591,44 @@ DirectvIntent try and find {Control}
 DirectvIntent try and go back to {Control}
 DirectvIntent try and go to the {Control}
 DirectvIntent try and go to {Control}
+DirectvIntent try and hit remote control {Control} button
+DirectvIntent try and hit remote {Control} button
+DirectvIntent try and hit the remote button {Control}
+DirectvIntent try and hit the remote control button {Control}
+DirectvIntent try and hit the remote control {Control}
+DirectvIntent try and hit the remote control {Control} button
+DirectvIntent try and hit the remote {Control}
+DirectvIntent try and hit the remote {Control} button
+DirectvIntent try and hit the {Control}
+DirectvIntent try and hit the {Control} button
+DirectvIntent try and hit {Control}
+DirectvIntent try and hit {Control} button
+DirectvIntent try and press remote control {Control} button
+DirectvIntent try and press remote {Control} button
+DirectvIntent try and press the remote button {Control}
+DirectvIntent try and press the remote control button {Control}
+DirectvIntent try and press the remote control {Control}
+DirectvIntent try and press the remote control {Control} button
+DirectvIntent try and press the remote {Control}
+DirectvIntent try and press the remote {Control} button
+DirectvIntent try and press the {Control}
+DirectvIntent try and press the {Control} button
+DirectvIntent try and press {Control}
+DirectvIntent try and press {Control} button
 DirectvIntent try and pull up the {Control}
 DirectvIntent try and pull up {Control}
+DirectvIntent try and push remote control {Control} button
+DirectvIntent try and push remote {Control} button
+DirectvIntent try and push the remote button {Control}
+DirectvIntent try and push the remote control button {Control}
+DirectvIntent try and push the remote control {Control}
+DirectvIntent try and push the remote control {Control} button
+DirectvIntent try and push the remote {Control}
+DirectvIntent try and push the remote {Control} button
+DirectvIntent try and push the {Control}
+DirectvIntent try and push the {Control} button
+DirectvIntent try and push {Control}
+DirectvIntent try and push {Control} button
 DirectvIntent try and switch it back to the {Control} channel
 DirectvIntent try and switch it back to the {Control} network
 DirectvIntent try and switch it back to the {Control} station
@@ -518,8 +669,44 @@ DirectvIntent try to find {Control}
 DirectvIntent try to go back to {Control}
 DirectvIntent try to go to the {Control}
 DirectvIntent try to go to {Control}
+DirectvIntent try to hit remote control {Control} button
+DirectvIntent try to hit remote {Control} button
+DirectvIntent try to hit the remote button {Control}
+DirectvIntent try to hit the remote control button {Control}
+DirectvIntent try to hit the remote control {Control}
+DirectvIntent try to hit the remote control {Control} button
+DirectvIntent try to hit the remote {Control}
+DirectvIntent try to hit the remote {Control} button
+DirectvIntent try to hit the {Control}
+DirectvIntent try to hit the {Control} button
+DirectvIntent try to hit {Control}
+DirectvIntent try to hit {Control} button
+DirectvIntent try to press remote control {Control} button
+DirectvIntent try to press remote {Control} button
+DirectvIntent try to press the remote button {Control}
+DirectvIntent try to press the remote control button {Control}
+DirectvIntent try to press the remote control {Control}
+DirectvIntent try to press the remote control {Control} button
+DirectvIntent try to press the remote {Control}
+DirectvIntent try to press the remote {Control} button
+DirectvIntent try to press the {Control}
+DirectvIntent try to press the {Control} button
+DirectvIntent try to press {Control}
+DirectvIntent try to press {Control} button
 DirectvIntent try to pull up the {Control}
 DirectvIntent try to pull up {Control}
+DirectvIntent try to push remote control {Control} button
+DirectvIntent try to push remote {Control} button
+DirectvIntent try to push the remote button {Control}
+DirectvIntent try to push the remote control button {Control}
+DirectvIntent try to push the remote control {Control}
+DirectvIntent try to push the remote control {Control} button
+DirectvIntent try to push the remote {Control}
+DirectvIntent try to push the remote {Control} button
+DirectvIntent try to push the {Control}
+DirectvIntent try to push the {Control} button
+DirectvIntent try to push {Control}
+DirectvIntent try to push {Control} button
 DirectvIntent try to switch it back to the {Control} channel
 DirectvIntent try to switch it back to the {Control} network
 DirectvIntent try to switch it back to the {Control} station
@@ -544,7 +731,6 @@ DirectvIntent try to turn the {Control} off
 DirectvIntent try to turn the {Control} on
 DirectvIntent try to turn {Control} off
 DirectvIntent try to turn {Control} on
-DirectvIntent try to {Control}
 DirectvIntent try to {Control}
 DirectvIntent try {Control}
 DirectvIntent turn it back to the {Control} channel
