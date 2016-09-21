@@ -5,7 +5,7 @@ var http = require('http'); // if going through a proxy that uses SSL change to 
 // In my case I had to move receiver to DMZ
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var local_ip = 'xxx.xxx.xxx.xxx';
+var local_ip = 'XXX.XXX.XXX.XXX';
 //externalIP or FQDN //////////////////////////////////////////////////////////////////////////
 //var local_ip = '<some fqdn>';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@ var local_ip = 'xxx.xxx.xxx.xxx';
  * App ID for the skill
  */
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var APP_ID = "amzn1.echo-sdk-ams.app.[APPID]"; 
+var APP_ID = "amzn1.ask.skill.[App ID]"; 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
 * The AlexaSkill prototype and helper functions
@@ -321,13 +321,14 @@ DTVControl.prototype.intentHandlers = {
 				
 				default:
                 
-                        if (intent.slots.Channel.value == null) {
-                         response.tell("I didn't understand.");
-                      }
-						else {
-                         path = '/tv/tune?major=' + intent.slots.Channel.value 	;
-                      }		
-                break;
+                        if (! isNaN(intent.slots.Channel.value) ) {
+
+                 path = '/tv/tune?major=' + intent.slots.Channel.value  ;
+
+              }
+                else {
+                response.tell("I didn't understand.");}
+        break;
 
 				
         } 
