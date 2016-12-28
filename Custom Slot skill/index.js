@@ -5,7 +5,10 @@ var http = require('http'); // if going through a proxy that uses SSL change to 
 // In my case I had to move receiver to DMZ
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var local_ip = 'XXX.XXX.XXX.XXX';
+var local_ip = '50.134.169.238';
+
+var public_ip_address = process.env.PUBLIC_IP_ADDRESS;        
+
 //externalIP or FQDN //////////////////////////////////////////////////////////////////////////
 //var local_ip = '<some fqdn>';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,7 +17,7 @@ var local_ip = 'XXX.XXX.XXX.XXX';
  * App ID for the skill
  */
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var APP_ID = "amzn1.ask.skill.[App ID]"; 
+var APP_ID = "amzn1.ask.skill.7c4b1ec3-20d7-4923-b570-3bef5f6a11f8"; 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
 * The AlexaSkill prototype and helper functions
@@ -61,6 +64,10 @@ DTVControl.prototype.intentHandlers = {
                 break;
 				
 				case "power":
+				case "power on":
+				case "power off":
+				case "on":
+				case "off":
                         path = '/remote/processKey?key=power&hold=keyPress';
                 break;
 				
@@ -333,7 +340,7 @@ DTVControl.prototype.intentHandlers = {
 				
         } 
 		var options = {
-                     host: local_ip,
+                     host: public_ip_address,
                      port: 8080, // default port for DTV interface
                      path: '' + path, // Modify if path is prefixed 
                      method: 'GET' //, //(remove first comment slashes if using the "auth" option below)
@@ -346,7 +353,6 @@ DTVControl.prototype.intentHandlers = {
 
 
 exports.handler = function (event, context) {
-       
         var dtvControl = new DTVControl();
         dtvControl.execute(event, context);
         

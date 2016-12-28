@@ -67,3 +67,9 @@ true TV
 VH one
 ESPN
 ESPN two
+ABC
+NBC
+CBS
+PBS
+HBO
+Showtime
