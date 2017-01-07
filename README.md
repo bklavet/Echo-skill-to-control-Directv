@@ -1,7 +1,11 @@
+
+# If you live in an apartment or complex where internet is provided, This most likely will not work.
+
 # Echo-skill-to-control-Directv
 
 youtube video walkthrough:
 https://www.youtube.com/watch?v=HRduDp4ip-Y
+
 
 This is an amazon echo skill that will control a networked Directv Receiver so that users can control Directv with their voice
 
