@@ -1,5 +1,5 @@
 
-# If you live in an apartment or complex where internet is provided, This most likely will not work.
+# If you live in an apartment or complex where internet is provided (that you are not paying for) This most likely will not work.
 
 # Echo-skill-to-control-Directv
 
