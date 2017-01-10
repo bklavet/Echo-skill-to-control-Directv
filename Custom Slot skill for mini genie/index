@@ -323,7 +323,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "ESPN2":
+				case "ESPN two":
 					path = '/tv/tune?major=209'+ dtv_Mac;
                 
 				break;

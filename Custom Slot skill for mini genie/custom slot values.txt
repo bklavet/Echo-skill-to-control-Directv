@@ -67,3 +67,6 @@ true TV
 VH one
 ESPN
 ESPN two
+NBC
+NBC sports
+fox sports
