@@ -1,0 +1,380 @@
+var http = require('http'); // if going through a proxy that uses SSL change to "require('https');"
+
+// Your external IP. Alexa can only access publically-accessible IPs. No LAN access unfortunately.
+// Make sure to set up port forwarding on port 8080 to your DTV's IP on your router.
+// In my case I had to move receiver to DMZ
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var local_ip = 'xxx.xxx.xxx.xxx';
+//externalIP or FQDN //////////////////////////////////////////////////////////////////////////
+//var local_ip = '<some fqdn>';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var dtv_Mac = '&clientAddr=XXXXXXXXXXX';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * App ID for the skill
+ */
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var APP_ID = "amzn1.app_id"; 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+* The AlexaSkill prototype and helper functions
+ */
+var AlexaSkill = require('./AlexaSkill');
+   
+var DTVControl = function () {
+    AlexaSkill.call(this, APP_ID);
+};
+
+
+// Extend AlexaSkill
+DTVControl.prototype = Object.create(AlexaSkill.prototype);
+DTVControl.prototype.constructor = DTVControl;
+
+//Ignore Certificate errors if using HTTPS communication
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
+DTVControl.prototype.intentHandlers = {
+        DirectvIntent: function (intent, session, response) {
+        
+        //No matter what she wants to tell you her opinion.
+        
+        function satisfyAlexa() {
+                        response.tell("OK");
+                        };
+        
+        // Obtain User Intent
+        switch(intent.slots.Control.value) {
+                
+                // Same button is used
+				case "play":
+				case "resume":
+                      path = '/remote/processKey?key=play&hold=keyPress'+ dtv_Mac;
+                break;
+           
+				case "pause":
+				case "freeze":
+                       path = '/remote/processKey?key=pause&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "guide":
+                        path = '/remote/processKey?key=guide&hold=keyPress'+ dtv_Mac
+                break;
+				
+				case "power":
+                        path = '/remote/processKey?key=power&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "format":
+                       path = '/remote/processKey?key=format&hold=keyPress'+ dtv_Mac;
+                break;
+	
+				case "rewind":
+                       path = '/remote/processKey?key=rew&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "replay":
+                         path = '/remote/processKey?key=replay&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "stop":
+                          path= '/remote/processKey?key=stop&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "advance":
+                                path= '/remote/processKey?key=advance&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "fast forward":
+                                path = '/remote/processKey?key=ffwd&hold=keyPress'+ dtv_Mac;
+                break;
+		
+				case "record":
+				case "save":
+                                path = '/remote/processKey?key=record&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "active":
+                                path= '/remote/processKey?key=active&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "list":
+				case "recorded shows":
+				case "DVR":
+                                path = '/remote/processKey?key=list&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "exit":
+				case "end":
+				case "leave":
+                                path = '/remote/processKey?key=exit&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "back":
+                                path= '/remote/processKey?key=back&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "menu":
+                                path = '/remote/processKey?key=menu&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "info":
+                                path= '/remote/processKey?key=info&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "up":
+
+                                path = '/remote/processKey?key=up&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "down":
+                                path = '/remote/processKey?key=down&hold=keyPress'+ dtv_Mac;
+                break;
+
+				case "left":
+                                path= '/remote/processKey?key=left&hold=keyPress'+ dtv_Mac;
+                break;
+			
+				case "right":
+                                path= '/remote/processKey?key=right&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "select":
+				case "enter":
+                                path=  '/remote/processKey?key=select&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "channel up":
+				case "page up":
+                                path= '/remote/processKey?key=chanup&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "channel down":
+				case "page down":
+                     path = '/remote/processKey?key=chandown&hold=keyPress'+ dtv_Mac;
+                break;
+				
+				case "previous":
+                        path= '/remote/processKey?key=prev&hold=keyPress'+ dtv_Mac;
+                break;
+			
+				case "CNN":
+					path = '/tv/tune?major=202'+ dtv_Mac;
+                
+				break;
+				
+				case "ABC":
+					path = '/tv/tune?major=397'+ dtv_Mac;
+                
+				break;
+				
+				case "A&E":
+					path = '/tv/tune?major=265'+ dtv_Mac;
+                
+				break;
+				
+				case "animal planet":
+					path = '/tv/tune?major=282'+ dtv_Mac;
+                
+				break;
+				
+				case "BET":
+					path = '/tv/tune?major=329'+ dtv_Mac;
+                
+				break;
+				
+				case "bravo":
+					path = '/tv/tune?major=237'+ dtv_Mac;
+                
+				break;
+				
+				case "CBS":
+					path = '/tv/tune?major=391'+ dtv_Mac;
+					
+				break;
+				
+				case "comedy central":
+					path = '/tv/tune?major=249'+ dtv_Mac;
+                
+				break;
+				
+				case "C span":
+					path = '/tv/tune?major=250'+ dtv_Mac;
+                
+				break;
+				
+				case "cartoon network":
+					path = '/tv/tune?major=296'+ dtv_Mac;
+                
+				break;
+				
+				case "discovery":
+					path = '/tv/tune?major=278'+ dtv_Mac;
+                
+				break;
+				
+				case "Disney channel":
+					path = '/tv/tune?major=290'+ dtv_Mac;
+                
+				break;
+				
+				case "Disney junior":
+					path = '/tv/tune?major=289'+ dtv_Mac;
+                
+				break;
+				
+				case "Disney XD":
+					path = '/tv/tune?major=292'+ dtv_Mac;
+                
+				break;
+				
+				case "food network":
+					path = '/tv/tune?major=231'+ dtv_Mac;
+                
+				break;
+				
+				case "fox news":
+					path = '/tv/tune?major=360'+ dtv_Mac;
+                
+				break;
+				
+				case "fox":
+					path = '/tv/tune?major=399'+ dtv_Mac;
+                
+				break;
+				
+				case "FX":
+					path = '/tv/tune?major=248'+ dtv_Mac;
+                
+				break;
+				
+				case "HGTV":
+					path = '/tv/tune?major=229'+ dtv_Mac;
+                
+				break;
+				
+				case "history channel":
+					path = '/tv/tune?major=269'+ dtv_Mac;
+                
+				break;
+				
+				case "lifetime":
+					path = '/tv/tune?major=252'+ dtv_Mac;
+                
+				break;
+				
+				case "MSNBC":
+					path = '/tv/tune?major=356'+ dtv_Mac;
+                
+				break;
+				
+				case "MTV":
+					path = '/tv/tune?major=331'+ dtv_Mac;
+                
+				break;
+				
+				case "MTV2":
+					path = '/tv/tune?major=333'+ dtv_Mac;
+                
+				break;
+				
+				case "national geographic":
+					path = '/tv/tune?major=276'+ dtv_Mac;
+                
+				break;
+				
+				case "nick junior":
+					path = '/tv/tune?major=301'+ dtv_Mac;
+                
+				break;
+				
+				case "spike":
+					path = '/tv/tune?major=241'+ dtv_Mac;
+                
+				break;
+
+				case "syfy":
+					path = '/tv/tune?major=244'+ dtv_Mac;
+                
+				break;
+				
+				case "TBS":
+					path = '/tv/tune?major=247'+ dtv_Mac;
+                
+				break;
+				
+				case "TNT":
+					path = '/tv/tune?major=245'+ dtv_Mac;
+                
+				break;
+			
+				case "true TV":
+					path = '/tv/tune?major=246'+ dtv_Mac;
+                
+				break;
+				
+				case "VH1":
+					path = '/tv/tune?major=335'+ dtv_Mac;
+                
+				break;
+				
+				case "ESPN":
+					path = '/tv/tune?major=206'+ dtv_Mac;
+                
+				break;
+				
+				case "ESPN2":
+					path = '/tv/tune?major=209'+ dtv_Mac;
+                
+				break;
+				
+				
+				case "NBC":
+					path = '/tv/tune?major=393'+ dtv_Mac;
+                
+				break;
+				
+				case "NBC sports":
+					path = '/tv/tune?major=220'+ dtv_Mac;
+                
+				break;
+				
+				case "fox sports":
+					path = '/tv/tune?major=219'+ dtv_Mac;
+                
+				break;
+				
+        
+				
+				default:
+                
+                        if (! isNaN(intent.slots.Channel.value) ) {
+
+                 path = '/tv/tune?major=' + intent.slots.Channel.value + dtv_Mac ;
+
+              }
+                else {
+                response.tell("I didn't understand.");}
+        break;
+
+				
+        } 
+		var options = {
+                     host: local_ip,
+                     port: 8080, // default port for DTV interface
+                     path: '' + path, // Modify if path is prefixed 
+                     method: 'GET' //, //(remove first comment slashes if using the "auth" option below)
+					 // auth: 'username:password' // this is used if going through authenticated proxy (this is BASIC AUTH)
+                    };
+          var req = http.request(options, satisfyAlexa);
+          req.end();						
+        }
+}
+
+
+exports.handler = function (event, context) {
+       
+        var dtvControl = new DTVControl();
+        dtvControl.execute(event, context);
+        
+};
