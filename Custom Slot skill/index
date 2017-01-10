@@ -158,162 +158,162 @@ DTVControl.prototype.intentHandlers = {
                 break;
 			
 				case "CNN":
-					path = '/tv/tune?major=202&minor=65535';
+					path = '/tv/tune?major=202';
                 
 				break;
 				
 				case "AMC":
-					path = '/tv/tune?major=254&minor=65535';
+					path = '/tv/tune?major=254';
                 
 				break;
 				
 				case "A&E":
-					path = '/tv/tune?major=265&minor=65535';
+					path = '/tv/tune?major=265';
                 
 				break;
 				
 				case "animal planet":
-					path = '/tv/tune?major=282&minor=65535';
+					path = '/tv/tune?major=282';
                 
 				break;
 				
 				case "BET":
-					path = '/tv/tune?major=329&minor=65535';
+					path = '/tv/tune?major=329';
                 
 				break;
 				
 				case "bravo":
-					path = '/tv/tune?major=237&minor=65535';
+					path = '/tv/tune?major=237';
                 
 				break;
 				
 				case "comedy central":
-					path = '/tv/tune?major=249&minor=65535';
+					path = '/tv/tune?major=249';
                 
 				break;
 				
 				case "C span":
-					path = '/tv/tune?major=250&minor=65535';
+					path = '/tv/tune?major=250';
                 
 				break;
 				
 				case "cartoon network":
-					path = '/tv/tune?major=296&minor=65535';
+					path = '/tv/tune?major=296';
                 
 				break;
 				
 				case "discovery":
-					path = '/tv/tune?major=278&minor=65535';
+					path = '/tv/tune?major=278';
                 
 				break;
 				
 				case "Disney channel":
-					path = '/tv/tune?major=290&minor=65535';
+					path = '/tv/tune?major=290';
                 
 				break;
 				
 				case "Disney junior":
-					path = '/tv/tune?major=289&minor=65535';
+					path = '/tv/tune?major=289';
                 
 				break;
 				
 				case "Disney XD":
-					path = '/tv/tune?major=292&minor=65535';
+					path = '/tv/tune?major=292';
                 
 				break;
 				
 				case "food network":
-					path = '/tv/tune?major=231&minor=65535';
+					path = '/tv/tune?major=231';
                 
 				break;
 				
 				case "fox":
-					path = '/tv/tune?major=360&minor=65535';
+					path = '/tv/tune?major=360';
                 
 				break;
 				
-				case "FX":
-					path = '/tv/tune?major=248&minor=65535';
+				case "fx":
+					path = '/tv/tune?major=248';
                 
 				break;
 				
-				case "HGTV":
-					path = '/tv/tune?major=229&minor=65535';
+				case "hgtv":
+					path = '/tv/tune?major=229';
                 
 				break;
 				
 				case "history channel":
-					path = '/tv/tune?major=269&minor=65535';
+					path = '/tv/tune?major=269';
                 
 				break;
 				
 				case "lifetime":
-					path = '/tv/tune?major=252&minor=65535';
+					path = '/tv/tune?major=252';
                 
 				break;
 				
 				case "MSNBC":
-					path = '/tv/tune?major=356&minor=65535';
+					path = '/tv/tune?major=356';
                 
 				break;
 				
 				case "MTV":
-					path = '/tv/tune?major=331&minor=65535';
+					path = '/tv/tune?major=331';
                 
 				break;
 				
 				case "MTV2":
-					path = '/tv/tune?major=333&minor=65535';
+					path = '/tv/tune?major=333';
                 
 				break;
 				
 				case "national geographic":
-					path = '/tv/tune?major=276&minor=65535';
+					path = '/tv/tune?major=276';
                 
 				break;
 				
 				case "nick junior":
-					path = '/tv/tune?major=301&minor=65535';
+					path = '/tv/tune?major=301';
                 
 				break;
 				
 				case "spike":
-					path = '/tv/tune?major=241&minor=65535';
+					path = '/tv/tune?major=241';
                 
 				break;
 
 				case "syfy":
-					path = '/tv/tune?major=244&minor=65535';
+					path = '/tv/tune?major=244';
                 
 				break;
 				
 				case "TBS":
-					path = '/tv/tune?major=247&minor=65535';
+					path = '/tv/tune?major=247';
                 
 				break;
 				
 				case "TNT":
-					path = '/tv/tune?major=245&minor=65535';
+					path = '/tv/tune?major=245';
                 
 				break;
 			
 				case "true TV":
-					path = '/tv/tune?major=246&minor=65535';
+					path = '/tv/tune?major=246';
                 
 				break;
 				
 				case "VH1":
-					path = '/tv/tune?major=335&minor=65535';
+					path = '/tv/tune?major=335';
                 
 				break;
 				
 				case "ESPN":
-					path = '/tv/tune?major=206&minor=65535';
+					path = '/tv/tune?major=206';
                 
 				break;
 				
 				case "ESPN2":
-					path = '/tv/tune?major=209&minor=65535';
+					path = '/tv/tune?major=209';
                 
 				break;
 				
