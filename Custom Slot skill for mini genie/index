@@ -168,8 +168,8 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "A&E":
-					path = '/tv/tune?major=265'+ dtv_Mac;
+				case "amc":
+					path = '/tv/tune?major=254';
                 
 				break;
 				
@@ -178,7 +178,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "BET":
+				case "b.e.t.":
 					path = '/tv/tune?major=329'+ dtv_Mac;
                 
 				break;
@@ -198,7 +198,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "C span":
+				case "c span":
 					path = '/tv/tune?major=250'+ dtv_Mac;
                 
 				break;
@@ -223,7 +223,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "Disney XD":
+				case "Disney xD":
 					path = '/tv/tune?major=292'+ dtv_Mac;
                 
 				break;
@@ -243,12 +243,12 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "FX":
+				case "fx":
 					path = '/tv/tune?major=248'+ dtv_Mac;
                 
 				break;
 				
-				case "HGTV":
+				case "hgtv":
 					path = '/tv/tune?major=229'+ dtv_Mac;
                 
 				break;
@@ -273,7 +273,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "MTV2":
+				case "MTV 2":
 					path = '/tv/tune?major=333'+ dtv_Mac;
                 
 				break;
@@ -313,7 +313,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "VH1":
+				case "v.h. 1":
 					path = '/tv/tune?major=335'+ dtv_Mac;
                 
 				break;
@@ -323,7 +323,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "ESPN two":
+				case "ESPN 2":
 					path = '/tv/tune?major=209'+ dtv_Mac;
                 
 				break;

@@ -36,13 +36,12 @@ channel down
 page down
 previous
 CNN
-A&E
-AMC
+amc
 animal planet
 b.e.t.
 bravo
 comedy central
-C span
+c span
 cartoon network
 discovery
 disney channel
@@ -64,9 +63,12 @@ syfy
 TBS
 TNT
 true TV
-VH one
+v.h. one
 ESPN
 ESPN two
 NBC
 NBC sports
 fox sports
+ABC
+CBS
+fox news

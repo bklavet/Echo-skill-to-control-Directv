@@ -162,13 +162,18 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "AMC":
-					path = '/tv/tune?major=254';
+				case "CBS":
+					path = '/tv/tune?major=391'+ dtv_Mac;
+					
+				break;
+				
+				case "ABC":
+					path = '/tv/tune?major=397'+ dtv_Mac;
                 
 				break;
 				
-				case "A&E":
-					path = '/tv/tune?major=265';
+				case "amc":
+					path = '/tv/tune?major=254';
                 
 				break;
 				
@@ -177,7 +182,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "BET":
+				case "b.e.t.":
 					path = '/tv/tune?major=329';
                 
 				break;
@@ -192,7 +197,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "C span":
+				case "c span":
 					path = '/tv/tune?major=250';
                 
 				break;
@@ -217,13 +222,18 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "Disney XD":
+				case "Disney xD":
 					path = '/tv/tune?major=292';
                 
 				break;
 				
 				case "food network":
 					path = '/tv/tune?major=231';
+                
+				break;
+				
+				case "fox news":
+					path = '/tv/tune?major=360'+ dtv_Mac;
                 
 				break;
 				
@@ -262,7 +272,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "MTV2":
+				case "MTV 2":
 					path = '/tv/tune?major=333';
                 
 				break;
@@ -302,7 +312,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "VH1":
+				case "v.h. 1":
 					path = '/tv/tune?major=335';
                 
 				break;
@@ -312,8 +322,23 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "ESPN2":
+				case "ESPN 2":
 					path = '/tv/tune?major=209';
+                
+				break;
+				
+				case "NBC sports":
+					path = '/tv/tune?major=220';
+                
+				break;
+				
+				case "NBC":
+					path = '/tv/tune?major=393';
+                
+				break;
+				
+				case "fox sports":
+					path = '/tv/tune?major=219';
                 
 				break;
 				
