@@ -63,7 +63,7 @@ syfy
 TBS
 TNT
 true TV
-v.h. one
+vh one
 ESPN
 ESPN two
 NBC

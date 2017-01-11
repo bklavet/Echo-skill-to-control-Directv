@@ -312,7 +312,7 @@ DTVControl.prototype.intentHandlers = {
                 
 				break;
 				
-				case "v.h. 1":
+				case "vh 1":
 					path = '/tv/tune?major=335';
                 
 				break;
