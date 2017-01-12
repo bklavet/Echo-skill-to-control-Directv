@@ -169,7 +169,7 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "amc":
-					path = '/tv/tune?major=254';
+					path = '/tv/tune?major=254'+ dtv_Mac;
                 
 				break;
 				
