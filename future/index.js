@@ -79,13 +79,9 @@ DTVControl.prototype.intentHandlers = {
 					response.on('data', (chunk) => { body += chunk })
 					response.on('end', () => {
 					var data = JSON.parse(body)
-					var title = data.items[0].title
-					context.succeed(
-					generateResponse(
-					buildSpeechletResponse(You are currently watching ${title}, true),
+					var title = data.title
+					response.tell ("You are currently watching" + {title}, true),
 					{}
-					)
-					)
 					})
 					});
           req.end();						
