@@ -2,7 +2,7 @@
   "intents": [
     {
       "intent": "DirectvIntent",
-      "slots": [
+      "slots": [living room
         {
           "name": "Control",
           "type": "LITERAL"
