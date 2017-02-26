@@ -1,0 +1,337 @@
+// config variables
+var http = require('http'); 							// if going through a proxy that uses SSL change to "require('https');"
+var request = require('request'); 					// this module requires npm install request or the included npm_modules folder
+var local_ip = 'XXX.XXX.XXX.XXX'; 				// external ip make sure to set port forwarding to 8080
+var APP_ID = "amzn1.ask.skill.[App ID]"; 		// your alexa skill app id goes here
+var clientAddr = "0"; 									// the client address of the direcTV box you wish to control 0 for main change for genies
+var port = 8080; 										// default port for DTV interface
+var pathPrefix = ""; 									// Modify if path is prefixed 
+var method = "GET";									// Method to use for api calls to DirecTV
+
+var AlexaSkill = require('./AlexaSkill');
+   
+var DTVControl = function () {
+    AlexaSkill.call(this, APP_ID);
+};
+
+// Extend AlexaSkill
+DTVControl.prototype = Object.create(AlexaSkill.prototype);
+DTVControl.prototype.constructor = DTVControl;
+
+//Ignore Certificate errors if using HTTPS communication
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
+DTVControl.prototype.intentHandlers = {
+	
+	DirectvIntent: function (intent, session, response) {
+        
+        // No matter what she wants to tell you her opinion.
+        function satisfyAlexa() {			
+			response.tell("OK");
+		};
+
+		// This function gets the title from guide requests and calls a function to send the title back
+		function getJSON(url, callback){
+			request.get(url, function(error, response, body){
+				var d = JSON.parse(body);
+				var title = d.title;
+				if(title !== undefined){
+					callback(title);
+				}
+				else{
+					callback("ERROR");
+				}
+			});
+		}
+		
+		/** Logic for Remote Control Functions **/
+
+			// supported keys by default - includes everything supported by DirecTV API
+			var supportedKeys = [
+				'power', 'poweron', 'poweroff',
+				'format', 'pause', 'rew', 'replay', 'stop', 'advance', 'ffwd',
+				'record', 'play', 'guide', 'active', 'list', 'exit', 'back',
+				'menu', 'info', 'up', 'down', 'left', 'right', 'select', 'red',
+				'green', 'yellow', 'blue', 'chanup', 'chandown', 'prev',
+				'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'dash', 'enter'
+			];
+
+			// in order to reference keys with names other than defaults we add key synonyms
+			var generateKeySynonymsMap = function(){
+					
+					var keyMap = {};
+				
+					// this function puts a key in the keyMap object if the map key is supported
+					var addKeySynonym = function(synonym, mapsToKey){
+						var isSuccessful = false;
+						mapsToKey = mapsToKey.toLowerCase();
+						if(supportedKeys.indexOf(mapsToKey) !== -1){
+							keyMap[synonym] = mapsToKey;
+							isSuccessful = true;
+						}	
+						return isSuccessful;
+					}
+
+					// add our key synonyms
+					addKeySynonym("resume", "play");
+					addKeySynonym("freeze", "pause");
+					addKeySynonym("rewind", "rew");
+					addKeySynonym("fast forward", "ffwd");
+					addKeySynonym("save", "record");
+					addKeySynonym("recorded shows", "list");
+					addKeySynonym("d.v.r", "list");
+					addKeySynonym("end", "exit");
+					addKeySynonym("cancel", "exit");
+					addKeySynonym("leave", "exit");
+					addKeySynonym("enter", "select");
+					addKeySynonym("channel up", "chanup");
+					addKeySynonym("page up", "chanup");
+					addKeySynonym("channel down", "chandown");
+					addKeySynonym("page down", "chandown");
+					addKeySynonym("previous", "prev");
+
+					return keyMap;
+			};
+
+			// storage for key synonyms
+			var keySynonyms = generateKeySynonymsMap();
+
+			// returns true if the key is a default supported key or a key synonym
+			var isKeyPath = function(key){
+				var isSupportedKey = (supportedKeys.indexOf(key) !== -1);
+				var isSupportedKeySynonym = (keySynonyms[key] !== undefined);
+				return (isSupportedKey || isSupportedKeySynonym);
+			}
+
+			// provide a key to get the correct api path works for supported keys and synonyms
+			var generateKeyPath = function(key){
+				var path;
+				key = key.toLowerCase();
+				
+				if(supportedKeys.indexOf(key) !== -1){
+					path = '/remote/processKey?key=' + key + '&hold=keyPress';
+				}
+				else if(keySynonyms[key] !== undefined){
+					path = '/remote/processKey?key=' + keySynonyms[key] + '&hold=keyPress';
+				}
+				return path;
+			};
+
+		/** End Logic for Remote Control Functions **/
+
+
+		/** Logic for Channel Functions **/
+
+			// Set up the list of channels that alexa should respond to by name
+			var generateChannelLineup = function(){
+				var lineup = {};			
+				
+				// function that adds channel numbers and names to the lineup
+				var addToLineup = function(chanelNumber, chanelName){
+					
+					for (var i = 1; i < arguments.length; i++) {
+						channelName = arguments[i];
+						lineup[channelName] = chanelNumber;
+					}						
+				};
+
+				// Specify the channel, then the chanel alias you can provide multiple alias by comma delimiting
+				addToLineup(5,		"NBC", "WRAL", "n.b.c", "w.r.a.l");
+				addToLineup(11,		"ABC", "a.b.c");
+				addToLineup(17,		"CBS", "c.b.s");
+				addToLineup(22,		"CW", "c.w");
+				addToLineup(202,	"CNN", "c.n.n");
+				addToLineup(206, 	"ESPN", "e.s.p.n");
+				addToLineup(209, 	"ESPN 2");
+				addToLineup(219, 	"fox sports");
+				addToLineup(220, 	"NBC sports");
+				addToLineup(229, 	"hgtv");
+				addToLineup(230, 	"DIY", "d.i.y");
+				addToLineup(231, 	"food network");
+				addToLineup(232, 	"cooking channel");
+				addToLineup(237, 	"bravo");
+				addToLineup(241, 	"spike");
+				addToLineup(242, 	"USA", "u.s.a");
+				addToLineup(244, 	"syfy");
+				addToLineup(245, 	"TNT", "t.n.t");
+				addToLineup(246, 	"true TV");
+				addToLineup(247, 	"TBS", "t.b.s");
+				addToLineup(248, 	"FX", "f.x");
+				addToLineup(249, 	"comedy central");
+				addToLineup(250, 	"c span");
+				addToLineup(252, 	"lifetime");
+				addToLineup(254, 	"AMC", "a.m.c");
+				addToLineup(269, 	"history channel", "history");
+				addToLineup(276, 	"national geographic", "natgeo");
+				addToLineup(277, 	"travel", "travel channel");
+				addToLineup(278, 	"discovery");
+				addToLineup(280, 	"TLC", "t.l.c");
+				addToLineup(281, 	"velocity");
+				addToLineup(282, 	"animal planet");
+				addToLineup(289, 	"disney junior");
+				addToLineup(290, 	"disney", "disney channel");
+				addToLineup(292, 	"disney XD");
+				addToLineup(296, 	"cartoon network");
+				addToLineup(301, 	"nick junior");
+				addToLineup(329, 	"BET", "b.e.t");
+				addToLineup(331, 	"MTV");
+				addToLineup(333, 	"MTV 2");
+				addToLineup(335, 	"vh 1");
+				addToLineup(356, 	"MSNBC", "m.s.n.b.c");
+				addToLineup(360, 	"fox news", "fox");
+				
+				return lineup;
+			};
+
+			// call our function to build the lineup
+			var channelLineup = generateChannelLineup();
+
+			// returns true if the channel is a number or a channel synonym / alias
+			var isChannel = function(channel){
+				var isChanelNumber = (typeof channel === "number");
+				var isChanelSynonym = (channelLineup[channel] !== undefined);
+				
+				return (isChanelNumber || isChanelSynonym);
+			};
+			
+			// given a channel by number or alias this will return the channel number
+			var getChannelNumber = function(channel){
+				var num;		
+				
+				if(channelLineup[channel] !== undefined){
+					num = channelLineup[channel];
+				}
+				else if(typeof channel === "number"){
+					num = channel;
+				}
+				return num;
+			};			
+			
+			// given a channel by number or alias this will return the DirecTV api path
+			var generateChannelPath = function(channel){
+				var path;		
+				
+				if(channelLineup[channel] !== undefined){
+					path = '/tv/tune?major=' + channelLineup[channel];
+				}
+				else if(typeof channel === "number"){
+					path = '/tv/tune?major=' + channel;
+				}
+				return path;
+			};
+
+		/** End Logic for Channel Functions **/
+			
+		// this function will append the client address to a path then return the new path
+		var appendClientAddress = function(path){
+			
+			if(clientAddr === undefined){
+				return path;
+			}
+			
+			var symbol = "&";
+			if(path.indexOf("?") === -1){
+				symbol = "?";
+			}
+			return path + symbol + 'clientAddr=' + clientAddr;
+		}
+
+		// given a command this function will figure out the api path for channels or keys
+		var getApiPath = function(command){
+			var path 
+			
+			if(isKeyPath(command)){
+				path = generateKeyPath(command);
+			}
+			else if (isChannel(command)){
+				path = generateChannelPath(command);
+			}
+			else{
+				response.tell("Sorry, I didn't understand.");
+			}
+			
+			path = appendClientAddress(path);
+
+			return path;
+		}
+
+		// this function will provide guide info for the current channel or a provided channel by number or alias
+		var getGuideInfo = function(channelValue){
+			
+			var respondForChannel = false;
+			var path = appendClientAddress('/tv/getTuned');
+			
+			if(isChannel(channelValue)){
+				respondForChannel = true;
+				var channelNumber = getChannelNumber(channelValue);
+				path = '/tv/getProgInfo?major=' + channelNumber;
+				path = appendClientAddress(path);
+			}
+			
+			var url = "http://" + local_ip + ":" + port + pathPrefix + path;
+						
+			getJSON(url, function(title){
+				if(title !== "ERROR"){
+					var respondWith = title + " is currently on.";					
+					response.tell(respondWith);
+				}
+			});
+									
+		};
+		
+		var needsToExecute = false;
+		
+		// this function routes the command to alexa
+		var interperateCommand = function(guideInfoValue, controlValue, channelValue){
+			
+			var path;
+			
+			// if the guideInfoSlot is defined
+			if(guideInfoValue)
+			{
+				getGuideInfo(controlValue);
+			}
+			// if the controlSlot is defined
+			else if(controlValue){
+				path = getApiPath(controlValue);
+				needsToExecute = true;
+			}
+			// if the channelSlot is defined
+			else if(channelValue){
+				path = getApiPath(channelValue);
+				needsToExecute = true;
+			}
+			else{ // we were unable to interperate the command
+				response.tell("Hmm, I'm not sure how, sorry.");
+			}
+
+			return path;
+		}
+			
+		// create some variables that are easier to work with
+		var guideInfoValue = intent.slots.GuideInfo.value;
+		var controlValue = intent.slots.Control.value;
+		var channelValue = intent.slots.Channel.value;		
+        
+		// ask or fuction to interperate alexas command
+		var path = interperateCommand(guideInfoValue, controlValue, channelValue);
+						
+		var options = {
+                     host: local_ip,
+                     port: port, // default port for DTV interface
+                     path: pathPrefix + path, // Modify if path is prefixed 
+                     method: method //, //(remove first comment slashes if using the "auth" option below)
+                    };
+					
+		if(needsToExecute){
+			var req = http.request(options, satisfyAlexa);
+			req.end();
+		}          						
+    }
+}
+
+
+exports.handler = function (event, context) {       
+        var dtvControl = new DTVControl();
+        dtvControl.execute(event, context);				
+};
