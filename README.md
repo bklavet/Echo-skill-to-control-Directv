@@ -4,6 +4,11 @@
 # Echo-skill-to-control-Directv
 
 youtube video walkthrough:
+Updated video reflecting aws lambda 12/31/17
+https://youtu.be/nUdS6siT0zY
+
+
+original
 https://www.youtube.com/watch?v=HRduDp4ip-Y
 
 
