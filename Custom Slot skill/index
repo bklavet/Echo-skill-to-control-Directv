@@ -154,7 +154,8 @@ DTVControl.prototype.intentHandlers = {
                 break;
 				
 				case "previous":
-                        path= '/remote/processKey?key=prev&hold=keyPress';
+
+path= '/remote/processKey?key=prev&hold=keyPress';
                 break;
 			
 				case "CNN":
@@ -198,6 +199,7 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "c span":
+				case "C span":
 					path = '/tv/tune?major=250';
                 
 				break;
