@@ -163,12 +163,12 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "CBS":
-					path = '/tv/tune?major=391'+ dtv_Mac;
+					path = '/tv/tune?major=391';
 					
 				break;
 				
 				case "ABC":
-					path = '/tv/tune?major=397'+ dtv_Mac;
+					path = '/tv/tune?major=397';
                 
 				break;
 				
@@ -233,7 +233,7 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "fox news":
-					path = '/tv/tune?major=360'+ dtv_Mac;
+					path = '/tv/tune?major=360';
                 
 				break;
 				
