@@ -249,6 +249,7 @@ path= '/remote/processKey?key=prev&hold=keyPress';
                 
 				break;
 				
+				case "h.g.t.v.":
 				case "hgtv":
 					path = '/tv/tune?major=229';
                 
