@@ -39,9 +39,12 @@ CNN
 amc
 animal planet
 b.e.t.
+bet
+BET
 bravo
 comedy central
 c span
+C span
 cartoon network
 discovery
 disney channel
@@ -61,6 +64,8 @@ nick junior
 spike
 syfy
 TBS
+tbs
+t.b.s.
 TNT
 true TV
 vh one
