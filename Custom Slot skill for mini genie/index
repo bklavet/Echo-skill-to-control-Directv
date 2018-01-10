@@ -5,7 +5,7 @@ var http = require('http'); // if going through a proxy that uses SSL change to 
 // In my case I had to move receiver to DMZ
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var local_ip = 'xxx.xxx.xxx.xxx';
+var wan_ip = 'xxx.xxx.xxx.xxx';
 //externalIP or FQDN //////////////////////////////////////////////////////////////////////////
 //var local_ip = '<some fqdn>';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -179,6 +179,8 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "b.e.t.":
+				case "BET":
+				case "bet":
 					path = '/tv/tune?major=329'+ dtv_Mac;
                 
 				break;
@@ -199,6 +201,7 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "c span":
+				case "C span":
 					path = '/tv/tune?major=250'+ dtv_Mac;
                 
 				break;
@@ -249,6 +252,7 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "hgtv":
+				case "h.g.t.v":
 					path = '/tv/tune?major=229'+ dtv_Mac;
                 
 				break;
@@ -299,6 +303,8 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "TBS":
+				case "t.b.s.":
+				case "tbs":
 					path = '/tv/tune?major=247'+ dtv_Mac;
                 
 				break;
@@ -360,7 +366,7 @@ DTVControl.prototype.intentHandlers = {
 				
         } 
 		var options = {
-                     host: local_ip,
+                     host: wan_ip,
                      port: 8080, // default port for DTV interface
                      path: '' + path, // Modify if path is prefixed 
                      method: 'GET' //, //(remove first comment slashes if using the "auth" option below)

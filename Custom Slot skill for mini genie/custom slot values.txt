@@ -39,9 +39,12 @@ CNN
 amc
 animal planet
 b.e.t.
+BET
+bet
 bravo
 comedy central
 c span
+C span
 cartoon network
 discovery
 disney channel
@@ -51,6 +54,7 @@ food network
 fox
 fx
 hgtv
+h.g.t.v.
 history channel
 lifetime
 MSNBC
@@ -61,9 +65,12 @@ nick junior
 spike
 syfy
 TBS
+tbs
+t.b.s.
 TNT
 true TV
 vh one
+vh 1
 ESPN
 ESPN two
 NBC
