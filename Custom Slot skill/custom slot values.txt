@@ -54,6 +54,7 @@ food network
 fox
 fx
 hgtv
+h.g.t.v.
 history channel
 lifetime
 MSNBC
@@ -63,7 +64,6 @@ national geographic
 nick junior
 spike
 syfy
-TBS
 tbs
 t.b.s.
 TNT

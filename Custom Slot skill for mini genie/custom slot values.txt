@@ -39,12 +39,10 @@ CNN
 amc
 animal planet
 b.e.t.
-BET
 bet
 bravo
 comedy central
 c span
-C span
 cartoon network
 discovery
 disney channel
@@ -64,7 +62,6 @@ national geographic
 nick junior
 spike
 syfy
-TBS
 tbs
 t.b.s.
 TNT
