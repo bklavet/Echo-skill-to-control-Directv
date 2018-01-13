@@ -16,6 +16,8 @@ This is an amazon echo skill that will control a networked Directv Receiver so t
 
 This is a hack job on another GitHub Repository: https://github.com/MrEggsalad/Echo-Roku-Voice-Control
 
+# If you get errors after running through this tutorial, please refer to this post for troubleshooting steps!!
+https://github.com/bklavet/Echo-skill-to-control-Directv/issues/12
 
 Thanks to mawrew19, The skill now works!  
 
