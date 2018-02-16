@@ -1,5 +1,5 @@
 var http = require('http'); // if going through a proxy that uses SSL change to "require('https');"
-
+var path = '';
 // Your external IP. Alexa can only access publically-accessible IPs. No LAN access unfortunately.
 // Make sure to set up port forwarding on port 8080 to your DTV's IP on your router.
 // In my case I had to move receiver to DMZ
@@ -227,6 +227,7 @@ DTVControl.prototype.intentHandlers = {
 				break;
 				
 				case "Disney xD":
+				case "Disney x.d.":
 					path = '/tv/tune?major=292'+ dtv_Mac;
                 
 				break;
@@ -253,6 +254,7 @@ DTVControl.prototype.intentHandlers = {
 				
 				case "hgtv":
 				case "h.g.t.v":
+				case "HGTV":
 					path = '/tv/tune?major=229'+ dtv_Mac;
                 
 				break;
