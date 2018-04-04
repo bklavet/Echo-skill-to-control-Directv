@@ -1,3 +1,7 @@
+# GOOD NEWS!!!  It looks like Amazon Alexa will support Directv
+https://www.digitaltrends.com/home/amazon-alexa-new-video-skill-api/
+# This has been a long time coming, and I hope that it will be every bit as positive as the articles are suggesting!
+
 
 # If you live in an apartment or complex where internet is provided (that you are not paying for) This most likely will not work.
 
