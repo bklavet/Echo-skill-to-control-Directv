@@ -1,7 +1,7 @@
 // config variables
 var http = require('http'); 							// if going through a proxy that uses SSL change to "require('https');"
 var request = require('request'); 					// this module requires npm install request or the included npm_modules folder
-var local_ip = 'XXX.XXX.XXX.XXX'; 				// external ip make sure to set port forwarding to 8080
+var local_ip = ''; //davisad don't put you wan on the github as a pull, everyone can see it. B Money.
 var APP_ID = "amzn1.ask.skill.[App ID]"; 		// your alexa skill app id goes here
 var clientAddr = "0"; 									// the client address of the direcTV box you wish to control 0 for main change for genies
 var port = 8080; 										// default port for DTV interface
